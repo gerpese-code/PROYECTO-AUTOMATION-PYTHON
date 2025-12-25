@@ -6,4 +6,4 @@ def test_login_exitoso(page):
     login_page.login("standard_user", "secret_sauce")
     
     # Aquí iría tu validación (assert)
-    assert page.url == "https://www.saucedemo.com/inventory.html"
+    assert page.url == "https://www.saucedemo.com/inventory.html"   
