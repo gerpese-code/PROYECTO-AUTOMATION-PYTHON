@@ -1,7 +1,9 @@
-def test_google(page):
-    # Paso 1: Ir a Google
-    page.goto("https://www.google.com")
+from pages.login_page import LoginPage
+
+def test_login_exitoso(page):
+    login_page = LoginPage(page)
+    login_page.navigate()
+    login_page.login("standard_user", "secret_sauce")
     
-    # Paso 2: Verificar que el título es correcto
-    assert "Google" in page.title()
-    print("¡La prueba pasó! El navegador se abrió y navegó correctamente.")
+    # Aquí iría tu validación (assert)
+    assert page.url == "https://www.saucedemo.com/inventory.html"
